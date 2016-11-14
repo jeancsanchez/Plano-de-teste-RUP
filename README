@@ -1,0 +1,22 @@
+1. Introdução
+
+Este documento apresenta o planejamento de atividades de testes do sistema “SYSCALL” o qual será utilizado como base para as atividades de acompanhamento revisão, verificação e validação do projeto, desde seu início até sua conclusão a fim de garantir a análise comparativa do resultado real versus planejado. Desta forma ações corretivas e preventivas poderão ser tomadas, sempre que resultados reais desviarem significativamente do planejado.
+
+2. Missão de avaliação e motivação dos testes
+
+3. Itens de Teste-Alvo
+4. Resumo dos testes planejados
+4.1 Resumo das inclusões de testes
+4.2 Resumo dos outros candidatos a possível inclusão
+4.3 Resumo das exclusões dos testes.
+5. Abordagem dos testes
+5.1 Catálogos iniciais de idéias de teste e outras fontes
+5.2 Tipos e técnicas de teste
+5.2.1 Teste de integridade de Dados e de Banco de Dados
+5.2.2 Teste de funcionamento
+5.2.3 Teste de ciclos de negócio
+5.2.4 Teste de Interface do usuário
+5.2.5 Determinação do perfil de desempenho
+5.2 Tipos e técnicas de teste
+5.2.6 Teste de carga
+5.2.7 Teste de stress
