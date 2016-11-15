@@ -93,16 +93,262 @@ A listagem abaixo identifica os itens de Unidade de Software de computador SYSCA
    
 
 4.1 Resumo das inclusões de testes
+
+·         Verificar se o servidor de dados suporta Controle de leitura e escrita;
+
+·         Verificar Fornecimento ininterrupto de energia elétrica;
+
+·         Verificar Tempo de Resposta;
+
+·         Verificar Acessos Simultâneos.
+
 4.2 Resumo dos outros candidatos a possível inclusão
+  N/A. Não há outros candidatos a possível inclusão no momento.
+  
 4.3 Resumo das exclusões dos testes.
+
 5. Abordagem dos testes
-5.1 Catálogos iniciais de idéias de teste e outras fontes
+  Os testes serão executados de forma manual e/ou automatizada.
+  
+5.1 Catálogos iniciais de idéias de teste e outras fontes de referência
+  N/A. Não há mudança nas fontes de referência.
+
 5.2 Tipos e técnicas de teste
-5.2.1 Teste de integridade de Dados e de Banco de Dados
-5.2.2 Teste de funcionamento
-5.2.3 Teste de ciclos de negócio
-5.2.4 Teste de Interface do usuário
-5.2.5 Determinação do perfil de desempenho
-5.2 Tipos e técnicas de teste
-5.2.6 Teste de carga
-5.2.7 Teste de stress
+    5.2.1 Teste de Integridade de Dados e de Banco de Dados
+    N/A.
+
+    5.2.2 Teste de Função
+    Vide seção 3. Itens-alvo dos Testes.
+
+    5.2.3 Teste de Ciclos de Negócios
+    N/A.
+
+    5.2.4 Teste da Interface do Usuário
+    N/A.
+
+    5.2.5 Determinação do Perfil de Desempenho
+    Vide seção 3.2 Testes Não Funcionais.
+
+    5.2.6 Teste de Carga
+    Vide seção 3. Itens-alvo dos Testes.
+
+    5.2.7 Teste de Stress
+    N/A.
+
+    5.2.8 Teste de Volume
+    N/A.
+
+    5.2.9 Teste de Segurança e de Controle de Acesso
+    N/A.
+
+    5.2.10 Teste de Tolerância a Falhas e de Recuperação
+    Vide seção 3.2 Testes Não Funcionais.
+
+    5.2.11 Teste de Configuração
+    Vide seção 3.2 Testes Não Funcionais.
+
+    5.2.12 Teste de Instalação
+    N/A.
+
+/*
+      5.2.1 Teste de integridade de Dados e de Banco de Dados
+      5.2.2 Teste de funcionamento
+      5.2.3 Teste de ciclos de negócio
+      5.2.4 Teste de Interface do usuário
+      5.2.5 Determinação do perfil de desempenho
+      5.2 Tipos e técnicas de teste
+      5.2.6 Teste de carga
+      5.2.7 Teste de stress
+*/
+6.0 Critérios de entrada e saída
+      Plano de Teste
+      6.1.1 Critérios de Entrada de Plano de Teste
+      Assim que for concluída da Fase de Construção este Plano de Testes poderá ser executado.
+
+      6.1.2 Critérios de Saída de Plano de Teste
+      Se os resultados do Plano de Teste forem satisfatórios este Plano de Testes terá sido concluído.
+
+      6.1.3 Critérios de Suspensão e de Reinício
+      N/A. Porque não há previsão de término e nem se será suspenso o projeto.
+
+      Ciclos de Teste
+      6.1.4 Critérios de Entrada de Ciclo de Teste
+      N/A. Ainda não existe entrada de ciclo de teste é apenas um plano de teste.
+
+      6.1.5 Critérios de Saída de Ciclo de Teste
+      N/A. Ainda não existe saída de ciclo de teste é apenas um plano de teste.
+
+      6.1.6 Término Anormal do Ciclo de Teste
+      N/A. Não há ciclo de teste no momento.
+      
+7.0 Produtos liberados
+
+      7.1 Sumários de Avaliação de Testes
+      N/A. Não há sumários de avaliação de testes, como é uma primeira versão do plano de teste, não houve necessidade de criar um sumário.
+
+      7.2 Relatórios da Cobertura de Teste
+      Para cada teste executado, um formulário de resultado de teste será criado. Isso deverá incluir o Nome do Teste, o Caso de Uso ou a Especificação Suplementar com qual o teste encontra-se relacionado, a Data do Teste, o Nome do Testador, as Condições de Pré-teste necessárias e os Resultados do Teste. O Microsoft Word será utilizado para registrar e reportar os resultados de teste. 
+
+      7.3 Relatórios da Qualidade Perceptível
+      N/A. Esse requisito será preenchido com o desenvolver do projeto.
+
+      7.4 Registros de Incidentes e Solicitações de Mudança
+      N/A. Só haverá necessidade desse tópico se houver alguma mudança no decorrer de seu desenvolvimento.
+
+      7.5 Conjunto de Testes de Regressão e Scripts de Teste de Suporte
+      Serão elaborados scripts de teste para os tipos de teste definidos. Esses scripts de teste são instruções, passo a passo, que permitem a execução de um teste. Eles podem assumir a forma de instruções de texto documentadas e executadas manualmente, ou de instruções que podem ser lidas pelo computador para ativar a execução automática do teste. Produtos de Trabalho Adicionais
+
+      7.5.1 Resultados Detalhados dos Testes
+      N/A. Só serão demonstrados assim que forem aplicados os testes.
+
+      7.5.2 Scripts de Teste Funcionais Automatizados Adicionais
+      N/A. Só serão demonstrados assim que forem aplicados os testes.
+
+      7.5.3 Guia de Teste
+      N/A. Só serão demonstrados assim que forem aplicados os testes.
+
+      7.5.4 Matrizes de Rastreabilidade
+      N/A. Após a demonstração de todos os testes, assim haverá necessidade de se desenvolver matrizes de rastreabilidade a fim de minimizar os defeitos que existirem. 
+
+
+8 Fluxo de trabalho de teste
+  Os resultados dos testes serão registrados formalmente em documentos com histórico para posterior análise.
+
+9 Necessidades Ambientais
+  Esta seção apresenta os recursos não humanos necessários ao Plano de Teste.
+  ...
+  
+ 10 Responsabilidades, Perfil da Equipe e Necessidades de Treinamento
+      Esta seção apresenta os recursos necessários para abordar o esforço de teste descrito neste Plano de Teste, as principais responsabilidades e os conjuntos de conhecimentos ou de habilidades exigidos desses recursos.Pessoas e Papéis
+      Esta tabela mostra as suposições referentes ao perfil da equipe do esforço de teste.
+      
+      Recursos Humanos
+
+      Papel
+
+      Recursos Mínimos Recomendáveis
+
+      (número de papéis alocados em tempo integral)
+
+      Responsabilidades ou Comentários Específicos
+
+      Gerente de Testes
+
+ 
+
+Supervisiona o gerenciamento.
+
+Estas são as responsabilidades:
+
+·         planejamento e logística
+
+·         combinar missão
+
+·         identificar motivadores
+
+·         adquirir recursos apropriados
+
+·         apresentar relatórios de gerenciamento
+
+·         defender os interesses do teste
+
+·         avaliar a eficiência do esforço de teste
+
+
+
+Analista de Teste 
+
+Identifica e define os testes específicos a serem conduzidos.
+
+Estas são as responsabilidades:
+
+·         identificar idéias de teste
+
+·         definir detalhes dos testes
+
+·         determinar os resultados dos testes
+
+·         documentar solicitações de mudança
+
+·         avaliar a qualidade do produto
+
+
+Designer de Teste
+
+Define a abordagem técnica referente à implementação do esforço de teste.
+
+Estas são as responsabilidades:
+
+·         definir a abordagem dos testes
+
+·         definir a arquitetura de automação de teste
+
+·         verificar as técnicas de teste
+
+·         definir os elementos de testabilidade
+
+·         estruturar a implementação dos testes
+
+
+Testador 
+
+Implementa e executa os testes.
+
+Estas são as responsabilidades:
+
+·         implementar os testes e os conjuntos de testes
+
+·         executar os conjuntos de testes
+
+·         registrar os resultados
+
+·         analisar as falhas dos testes e possibilitar a recuperação posterior
+
+·         documentar incidentes
+
+
+
+Administrador do Sistema de Teste 
+
+Assegura a manutenção e o gerenciamento dos recursos e do ambiente de teste.
+
+Estas são as responsabilidades:
+
+·         administrar o sistema de gerenciamento de teste
+
+·         instalar e suportar o acesso às configurações do ambiente de teste e aos laboratórios de teste, bem como a recuperação deles
+
+
+
+Administrador do Banco de Dados, Gerente do Banco de Dados 
+
+Assegura o gerenciamento e a manutenção dos recursos e do ambiente dos dados de teste (banco de dados).
+
+Estas são as responsabilidades:
+
+·         suportar a administração dos dados de teste e das plataformas de teste (banco de dados)
+
+
+
+Designer 
+
+Identifica e define as operações, os atributos e as associações das classes de teste.
+
+Estas são as responsabilidades:
+
+·         define as classes de teste necessárias para suportar os requisitos de testabilidade conforme definido pela equipe de teste
+
+
+
+Implementador
+
+Implementa as classes de teste e os pacotes de teste e efetua testes de unidade nos mesmos.
+
+Estas são as responsabilidades:
+
+·         cria os componentes de teste necessários para suportar os requisitos de testabilidade conforme definido pelo designer
+
+ 
+
+Perfil da Equipe e Necessidades de Treinamento
+N/A. Os profissionais envolvidos são aptos a desenvolver software, o que falta é experiência, mas devido ao tempo previsto, será possível se desenvolver algo melhor do que o esperado.
