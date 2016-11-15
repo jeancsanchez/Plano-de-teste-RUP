@@ -218,7 +218,7 @@ A listagem abaixo identifica os itens de Unidade de Software de computador SYSCA
   Esta seção apresenta os recursos não humanos necessários ao Plano de Teste.
   ...
   
- 10 Responsabilidades, Perfil da Equipe e Necessidades de Treinamento
+10 Responsabilidades, Perfil da Equipe e Necessidades de Treinamento
       Esta seção apresenta os recursos necessários para abordar o esforço de teste descrito neste Plano de Teste, as principais responsabilidades e os conjuntos de conhecimentos ou de habilidades exigidos desses recursos.Pessoas e Papéis
       Esta tabela mostra as suposições referentes ao perfil da equipe do esforço de teste.
       
@@ -348,7 +348,30 @@ Estas são as responsabilidades:
 
 ·         cria os componentes de teste necessários para suportar os requisitos de testabilidade conforme definido pelo designer
 
- 
-
 Perfil da Equipe e Necessidades de Treinamento
 N/A. Os profissionais envolvidos são aptos a desenvolver software, o que falta é experiência, mas devido ao tempo previsto, será possível se desenvolver algo melhor do que o esperado.
+
+
+11. Riscos, Dependências, Suposições e Restrições.
+  N/A. Porque como é um plano de teste, nele estão contidas informações que possam se realizar um projeto sem riscos, dependências, suposições ou restrições.
+
+12. Procedimentos e Processos de Gerenciamento
+    N/A. Porque tais procedimentos e processos de gerenciamento são aplicados nos 10 artefatos desenvolvidos para se realizar um sistema embarcado de tempo real.
+
+    Medição e Avaliação da Extensão do Teste
+      N/A. Não há previsão para a extensão do teste.
+
+    Avaliação dos Produtos Liberados deste Plano de Teste
+      N/A. Não há produtos liberados neste plano de teste, por ser apenas o começo.
+
+    Relato de Problemas, Seleção de Pessoas para Resolvê-los e Busca de Soluções.
+      N/A. Não há problemas pelo projeto estar apenas no começo, então não houve soluções e nem qualquer tipo de mudança.
+
+    Gerenciamento de Ciclos de Teste
+      N/A. Não há ciclos de teste.
+
+    Estratégias de Rastreabilidade
+      N/A. Não há rastreabilidade, somente com o decorrer do desenvolvimento do projeto.
+
+    Aprovação e Encerramento
+      N/A. Sem previsão para esse requisito, somente com o decorrer do desenvolvimento do projeto esse requisito pode ser aplicado ou não, dependerá do andamento do projeto.
