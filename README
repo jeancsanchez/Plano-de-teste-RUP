@@ -1,377 +1,524 @@
 1. Introdução
-
 Este documento apresenta o planejamento de atividades de testes do sistema “SYSCALL” o qual será utilizado como base para as atividades de acompanhamento revisão, verificação e validação do projeto, desde seu início até sua conclusão a fim de garantir a análise comparativa do resultado real versus planejado. Desta forma ações corretivas e preventivas poderão ser tomadas, sempre que resultados reais desviarem significativamente do planejado.
+1.1 Terminologia e Acrônimos do Documento
+Operador: Funcionário da empresa ou testador que irá interagir com a interface cliente do sistema.
+
 
 2. Missão de avaliação e motivação dos testes
+Neste documento serão contemplados os principais testes a serem executados no sistema SYSCALL, sistema interno da empresa multinacional WIDEW, a fim de garantir máxima a performance e escalabilidade do sistema.
 
-Neste documento serão contemplados os principais testes a serem executados no sistema...
 
 3. Itens de Teste-Alvo
+A listagem abaixo identifica os itens de Unidade de Software de computador SYSCALL que foram identificados com alvo dos testes. Essa lista representa os itens que serão testados.
 
-A listagem abaixo identifica os itens de Unidade de Software de computador SYSCALL que foram identificados com alvo dos testes.Essa lista representa os itens que serão testados.
-  3.1 Testes funcionais
-    Leitura e escrita no banco de dados    
-    Tempo de resposta nas consultas no banco de dados
-    Tempo de resposta do sistema operacional
-    Latência da Internet
-    
-    
-  3.2 Testes Não Funcionais
-    Fornecimento ininterrupto de energia elétrica
-    Fornecimento ininterrupto de Internet
-    Tempo de resposta
-    Acessos simultâneos
-    
-    
+
+3.1 Testes funcionais	
+Leitura e escrita no banco de dados	
+Tempo de resposta nas consultas no banco de dados devem durar no máximo 2 minutos.	
+Tempo de resposta do sistema operacional
+Latência da Internet
+
+
+3.2 Testes Não Funcionais
+Fornecimento 	ininterrupto de energia elétrica
+Fornecimento 	ininterrupto de Internet
+Tempo de resposta
+Acessos simultâneos
+
+
 4. Resumo dos testes planejados
-  4.1  Testes Funcionais
-    4.2 Leitura e escrita no banco de dados
-    
-      Objetivo do Tipo de Teste:
-      Verificar se o operador consegue ler e inserir novos dados no sistema em tempo hábil.
-
-      Técnica:
-      Após cada interação do operador com o banco de dados, deve ser exibido uma mensagem na tela do procedimento e um log de atividades deve ser gerado e armazenado em um servidor de backup.
-
-      Critérios de Êxito:
-      O operador executa uma interação de leitura ou escrita no banco de dados, então é exibida uma mensagem de êxito na interface cliente e gerado um log de atividade.
-
-      Considerações Especiais:
-      Nenhuma.
-    
-    4.3 Tempo de resposta nas consultas no banco de dados
-    4.4 Tempo de resposta do sistema operacional
-    4.5 Latência da Internet
-    
-  4.6  Testes Não Funcionais
-    4.7 Fornecimento ininterrupto de energia elétrica
-    
-      Objetivo do Tipo de Teste:
-      Verificar o fornecimento constante de energia elétrica para o funcionamento do sistema.
-
-      Técnica:
-      Deixar o sistema ligado durante um tempo e observar se o fornecimento permanece constante.
-
-      Critérios de Êxito:
-      A energia ficará sendo fornecida sem cortes.
-
-      Considerações Especiais:
-      Nenhuma.
-    
-    4.8 Fornecimento ininterrupto de Internet
-    
-    
-    4.9 Tempo de resposta
-    
-      Objetivo do Tipo de Teste:
-      Verificar o intervalo de tempo de resposta do barramento de dados
-
-      Técnica:
-      Enviar pacotes de mensagens para o barramento de dados
-
-      Critérios de Êxito:
-      O atendimento deste padrão estabelecido:
-      Time for 4 byte transfer = ~ 82 μs.
-
-      Considerações Especiais:
-      Nenhuma.
-    
-    
-    5.0 Acessos simultâneos
-    
-      Objetivo do Tipo de Teste:
-      Verificar se o servidor de dados consegue gerenciar o acesso simultâneo
-
-      Técnica:
-      Várias máquinas cliente enviando e requisitando mensagens ao barramento de dados ao mesmo tempo.
-
-      Critérios de Êxito:
-      O atendimento de cada acesso de forma escalonada.
-
-      Considerações Especiais:
-      Nenhuma.
-   
-
-4.1 Resumo das inclusões de testes
-
-·         Verificar se o servidor de dados suporta Controle de leitura e escrita;
-
-·         Verificar Fornecimento ininterrupto de energia elétrica;
-
-·         Verificar Tempo de Resposta;
-
-·         Verificar Acessos Simultâneos.
-
-4.2 Resumo dos outros candidatos a possível inclusão
-  N/A. Não há outros candidatos a possível inclusão no momento.
-  
-4.3 Resumo das exclusões dos testes.
-
-5. Abordagem dos testes
-  Os testes serão executados de forma manual e/ou automatizada.
-  
-5.1 Catálogos iniciais de idéias de teste e outras fontes de referência
-  N/A. Não há mudança nas fontes de referência.
-
-5.2 Tipos e técnicas de teste
-    5.2.1 Teste de Integridade de Dados e de Banco de Dados
-    N/A.
-
-    5.2.2 Teste de Função
-    Vide seção 3. Itens-alvo dos Testes.
-
-    5.2.3 Teste de Ciclos de Negócios
-    N/A.
-
-    5.2.4 Teste da Interface do Usuário
-    N/A.
-
-    5.2.5 Determinação do Perfil de Desempenho
-    Vide seção 3.2 Testes Não Funcionais.
-
-    5.2.6 Teste de Carga
-    Vide seção 3. Itens-alvo dos Testes.
-
-    5.2.7 Teste de Stress
-    N/A.
-
-    5.2.8 Teste de Volume
-    N/A.
-
-    5.2.9 Teste de Segurança e de Controle de Acesso
-    N/A.
-
-    5.2.10 Teste de Tolerância a Falhas e de Recuperação
-    Vide seção 3.2 Testes Não Funcionais.
-
-    5.2.11 Teste de Configuração
-    Vide seção 3.2 Testes Não Funcionais.
-
-    5.2.12 Teste de Instalação
-    N/A.
-
-/*
-      5.2.1 Teste de integridade de Dados e de Banco de Dados
-      5.2.2 Teste de funcionamento
-      5.2.3 Teste de ciclos de negócio
-      5.2.4 Teste de Interface do usuário
-      5.2.5 Determinação do perfil de desempenho
-      5.2 Tipos e técnicas de teste
-      5.2.6 Teste de carga
-      5.2.7 Teste de stress
-*/
-6.0 Critérios de entrada e saída
-      Plano de Teste
-      6.1.1 Critérios de Entrada de Plano de Teste
-      Assim que for concluída da Fase de Construção este Plano de Testes poderá ser executado.
-
-      6.1.2 Critérios de Saída de Plano de Teste
-      Se os resultados do Plano de Teste forem satisfatórios este Plano de Testes terá sido concluído.
-
-      6.1.3 Critérios de Suspensão e de Reinício
-      N/A. Porque não há previsão de término e nem se será suspenso o projeto.
-
-      Ciclos de Teste
-      6.1.4 Critérios de Entrada de Ciclo de Teste
-      N/A. Ainda não existe entrada de ciclo de teste é apenas um plano de teste.
-
-      6.1.5 Critérios de Saída de Ciclo de Teste
-      N/A. Ainda não existe saída de ciclo de teste é apenas um plano de teste.
-
-      6.1.6 Término Anormal do Ciclo de Teste
-      N/A. Não há ciclo de teste no momento.
-      
-7.0 Produtos liberados
-
-      7.1 Sumários de Avaliação de Testes
-      N/A. Não há sumários de avaliação de testes, como é uma primeira versão do plano de teste, não houve necessidade de criar um sumário.
-
-      7.2 Relatórios da Cobertura de Teste
-      Para cada teste executado, um formulário de resultado de teste será criado. Isso deverá incluir o Nome do Teste, o Caso de Uso ou a Especificação Suplementar com qual o teste encontra-se relacionado, a Data do Teste, o Nome do Testador, as Condições de Pré-teste necessárias e os Resultados do Teste. O Microsoft Word será utilizado para registrar e reportar os resultados de teste. 
-
-      7.3 Relatórios da Qualidade Perceptível
-      N/A. Esse requisito será preenchido com o desenvolver do projeto.
-
-      7.4 Registros de Incidentes e Solicitações de Mudança
-      N/A. Só haverá necessidade desse tópico se houver alguma mudança no decorrer de seu desenvolvimento.
-
-      7.5 Conjunto de Testes de Regressão e Scripts de Teste de Suporte
-      Serão elaborados scripts de teste para os tipos de teste definidos. Esses scripts de teste são instruções, passo a passo, que permitem a execução de um teste. Eles podem assumir a forma de instruções de texto documentadas e executadas manualmente, ou de instruções que podem ser lidas pelo computador para ativar a execução automática do teste. Produtos de Trabalho Adicionais
-
-      7.5.1 Resultados Detalhados dos Testes
-      N/A. Só serão demonstrados assim que forem aplicados os testes.
-
-      7.5.2 Scripts de Teste Funcionais Automatizados Adicionais
-      N/A. Só serão demonstrados assim que forem aplicados os testes.
-
-      7.5.3 Guia de Teste
-      N/A. Só serão demonstrados assim que forem aplicados os testes.
-
-      7.5.4 Matrizes de Rastreabilidade
-      N/A. Após a demonstração de todos os testes, assim haverá necessidade de se desenvolver matrizes de rastreabilidade a fim de minimizar os defeitos que existirem. 
+4.1 Testes Funcionais
+4.2 Leitura e escrita no banco de dados
+Objetivo do Tipo de Teste:
+Verificar se o operador consegue ler e inserir novos dados no sistema em tempo hábil.
 
 
-8 Fluxo de trabalho de teste
-  Os resultados dos testes serão registrados formalmente em documentos com histórico para posterior análise.
+Técnica:
+Após cada interação do operador com o banco de dados, deve ser exibido uma mensagem na tela do procedimento e um log de atividades deve ser gerado e armazenado em um servidor de backup.
 
-9 Necessidades Ambientais
-  Esta seção apresenta os recursos não humanos necessários ao Plano de Teste.
-  ...
-  
-10 Responsabilidades, Perfil da Equipe e Necessidades de Treinamento
-      Esta seção apresenta os recursos necessários para abordar o esforço de teste descrito neste Plano de Teste, as principais responsabilidades e os conjuntos de conhecimentos ou de habilidades exigidos desses recursos.Pessoas e Papéis
-      Esta tabela mostra as suposições referentes ao perfil da equipe do esforço de teste.
-      
-      Recursos Humanos
 
-      Papel
+Critérios de Êxito:
+O operador executa uma interação de leitura ou escrita no banco de dados, então é exibida uma mensagem de êxito na interface cliente e gerado um log de atividade.
 
-      Recursos Mínimos Recomendáveis
 
-      (número de papéis alocados em tempo integral)
+Considerações Especiais:
+Nenhuma.
 
-      Responsabilidades ou Comentários Específicos
 
-      Gerente de Testes
+4.3 Tempo de resposta nas consultas no banco de dados
+Objetivo do Tipo de Teste:
+Verificar se as consultas realizadas no banco de dados retornam os resultados dentro do tempo esperado (2 min). 
 
- 
 
+Técnica:
+O operador irá realizar de 10 consultas no banco de dados, procurando por todos os campos disponíveis nas tabelas. Depois, será realizada mais 10 consultas com complexidade alta utilizando filtro de campos e condições booleanas.
+
+
+Critérios de Êxito:
+Para cada consulta realizada dentre as 20 todas devem retornam um resultado em menos de 2 minutos e ao final a média simples de espera das consultas também não pode ultrapassar de 120 segundos.
+
+
+Considerações Especiais:
+A consulta deve ser realizada a partir da interface cliente do sistema e não via linha de comando.
+
+
+4.4 Tempo de resposta do sistema operacional
+Objetivo do Tipo de Teste:
+Verificar se os sistema operacional utilizado consegue realizar todas as operações necessárias sem travamento.
+
+
+Técnica:
+Será realizado o teste de índice de experiência do próprio Windows.
+
+
+Critérios de Êxito:
+O índice de experiência do Windows deve ser acima de 8,0.
+
+
+Considerações Especiais:
+O teste será feito nas máquinas que tiverem instalado Windows a partir da versão Vista Home Basic.
+
+
+4.5 Latência da Internet
+Objetivo do Tipo de Teste:
+Verificar se o tempo de resposta da internet é de no máximo 10 segundos.
+
+
+Técnica:
+O tester irá usar a ferramenta “Ping” do sistema operacional e irá “pingar” todos os endereços de IP dos servidores de dados da empresa WIDEW.
+
+
+Critérios de Êxito:
+Para cada IP “pingado”, o tempo de resposta dos pacotes devem ficar dentro dos 10 ms.
+
+
+Considerações Especiais:
+O teste deve ser realizado a partir do terminal do sistema operacional utilizado para o teste.
+
+
+4.6 Testes Não Funcionais
+4.7 Fornecimento ininterrupto de energia elétrica
+Objetivo do Tipo de Teste:
+Verificar o fornecimento constante de energia elétrica para o funcionamento do sistema.
+
+
+Técnica:
+Deixar o sistema ligado durante um tempo e observar se o fornecimento permanece constante.
+
+
+Critérios de Êxito:
+A energia ficará sendo fornecida sem cortes.
+
+
+Considerações Especiais:
+Nenhuma.
+
+
+4.8 Fornecimento ininterrupto de Internet
+Objetivo do Tipo de Teste:
+Verificar o fornecimento constante de internet para o funcionamento do sistema.
+
+
+Técnica:
+Usar a ferramenta “Ping” do sistema operacional e “Pingar” todos os endereços de IP dos servidores de dados da empresa WIDEW durante 48 horas seguidas sem interrupções.
+
+
+Critérios de Êxito:
+Nenhum pacote de dados enviado durante o teste será perdido.
+
+
+Considerações Especiais:
+Nenhuma.
+
+
+4.9 Tempo de resposta
+Objetivo do Tipo de Teste:
+Verificar o intervalo de tempo de resposta do barramento de dados
+
+
+Técnica:
+Enviar pacotes de mensagens para o barramento de dados
+
+
+Critérios de Êxito:
+O atendimento deste padrão estabelecido:
+Time for 4 byte transfer = ~ 82 μs.
+
+
+Considerações Especiais:
+Nenhuma.
+
+
+5.0 Acessos simultâneos
+Objetivo do Tipo de Teste:
+Verificar se o servidor de dados consegue gerenciar o acesso simultâneo
+
+
+Técnica:
+Várias máquinas cliente enviando e requisitando mensagens ao servidor de dados ao mesmo tempo.
+
+
+Critérios de Êxito:
+O atendimento de cada acesso de forma escalonada.
+
+
+Considerações Especiais:
+Nenhuma.
+
+
+6.  Resumo das inclusões de testes
+· Verificar se o servidor de dados suporta Controle de leitura e escrita;
+
+
+· Verificar Fornecimento ininterrupto de energia elétrica;
+
+
+· Verificar Fornecimento ininterrupto de Internet;
+
+
+· Verificar Tempo de Resposta;
+
+
+· Verificar Acessos Simultâneos.
+
+
+6.1 Resumo dos outros candidatos a possível inclusão
+N/A. Não há outros candidatos a possível inclusão no momento.
+
+
+7.  Abordagem dos testes
+Os testes serão executados de forma manual e/ou automatizada.
+
+
+7.1 Catálogos iniciais de idéias de teste e outras fontes de referência
+N/A. Não há mudança nas fontes de referência.
+
+
+7.2 Tipos e técnicas de teste
+7.2.1 Teste de Integridade de Dados e de Banco de Dados
+N/A.
+
+
+7.2.2 Teste de Função
+Vide seção 3. Itens-alvo dos Testes.
+
+
+7.2.3 Teste de Ciclos de Negócios
+N/A.
+
+
+7.2.4 Teste da Interface do Usuário
+N/A.
+
+
+7.2.5 Determinação do Perfil de Desempenho
+Vide seção 3.2 Testes Não Funcionais.
+
+
+7.2.6 Teste de Carga
+Vide seção 3. Itens-alvo dos Testes.
+
+
+7.2.7 Teste de Stress
+N/A.
+
+
+7.2.8 Teste de Volume
+N/A.
+
+
+7.2.9 Teste de Segurança e de Controle de Acesso
+N/A.
+
+
+7.2.10 Teste de Tolerância a Falhas e de Recuperação
+Vide seção 3.2 Testes Não Funcionais.
+
+
+7.2.11 Teste de Configuração
+Vide seção 3.2 Testes Não Funcionais.
+
+
+7.2.12 Teste de Instalação
+N/A.
+
+
+8. Critérios de entrada e saída
+Plano de Teste
+8.1.1 Critérios de Entrada de Plano de Teste
+Assim que for concluída da Fase de Construção este Plano de Testes poderá ser executado.
+
+
+8.1.2 Critérios de Saída de Plano de Teste
+Se os resultados do Plano de Teste forem satisfatórios este Plano de Testes terá sido concluído.
+
+
+8.1.3 Critérios de Suspensão e de Reinício
+N/A. Porque não há previsão de término e nem se será suspenso o projeto.
+
+
+Ciclos de Teste
+8.1.4 Critérios de Entrada de Ciclo de Teste
+N/A. Ainda não existe entrada de ciclo de teste é apenas um plano de teste.
+
+
+8.1.5 Critérios de Saída de Ciclo de Teste
+N/A. Ainda não existe saída de ciclo de teste é apenas um plano de teste.
+
+
+8.1.6 Término Anormal do Ciclo de Teste
+N/A. Não há ciclo de teste no momento.
+9. Produtos liberados
+9.1 Sumários de Avaliação de Testes
+N/A. Não há sumários de avaliação de testes, como é uma primeira versão do plano de teste, não houve necessidade de criar um sumário.
+
+
+9.2 Relatórios da Cobertura de Teste
+Para cada teste executado, um formulário de resultado de teste será criado. Isso deverá incluir o Nome do Teste, o Caso de Uso ou a Especificação Suplementar com qual o teste encontra-se relacionado, a Data do Teste, o Nome do Testador, as Condições de Pré-teste necessárias e os Resultados do Teste. O Microsoft Word será utilizado para registrar e reportar os resultados de teste.
+
+
+9.3 Relatórios da Qualidade Perceptível
+N/A. Esse requisito será preenchido com o desenvolver do projeto.
+
+
+9.4 Registros de Incidentes e Solicitações de Mudança
+N/A. Só haverá necessidade desse tópico se houver alguma mudança no decorrer de seu desenvolvimento.
+
+
+9.5 Conjunto de Testes de Regressão e Scripts de Teste de Suporte
+Serão elaborados scripts de teste para os tipos de teste definidos. Esses scripts de teste são instruções, passo a passo, que permitem a execução de um teste. Eles podem assumir a forma de instruções de texto documentadas e executadas manualmente, ou de instruções que podem ser lidas pelo computador para ativar a execução automática do teste. Produtos de Trabalho Adicionais
+
+
+9.5.1 Resultados Detalhados dos Testes
+N/A. Só serão demonstrados assim que forem aplicados os testes.
+
+
+9.5.2 Scripts de Teste Funcionais Automatizados Adicionais
+N/A. Só serão demonstrados assim que forem aplicados os testes.
+
+
+9.5.3 Guia de Teste
+N/A. Só serão demonstrados assim que forem aplicados os testes.
+
+
+9.5.4 Matrizes de Rastreabilidade
+N/A. Após a demonstração de todos os testes, assim haverá necessidade de se desenvolver matrizes de rastreabilidade a fim de minimizar os defeitos que existirem.
+
+
+
+
+10. Fluxo de trabalho de teste
+Os resultados dos testes serão registrados formalmente em documentos com histórico para posterior análise.
+
+
+11. Necessidades Ambientais
+Esta seção apresenta os recursos não humanos necessários ao Plano de Teste.
+
+
+Recurso
+Quantidade
+Nome e tipo
+Servidor de banco de dados
+5
+SQL Server Professional Edition 2014
+Processador 
+Um por máquina cliente
+Intel i7
+Servidor de backup
+5
+Amazon  Glacier (Serviço em nuvem)
+Sistema operacional
+Um por máquina cliente
+Windows Vista/7/8/8.1/10
+
+
+
+
+12. Responsabilidades, Perfil da Equipe e Necessidades de Treinamento
+Esta seção apresenta os recursos necessários para abordar o esforço de teste descrito neste Plano de Teste, as principais responsabilidades e os conjuntos de conhecimentos ou de habilidades exigidos desses recursos.
+Recursos Humanos
+Gerente de Testes
 Supervisiona o gerenciamento.
 
+
 Estas são as responsabilidades:
 
-·         planejamento e logística
 
-·         combinar missão
-
-·         identificar motivadores
-
-·         adquirir recursos apropriados
-
-·         apresentar relatórios de gerenciamento
-
-·         defender os interesses do teste
-
-·         avaliar a eficiência do esforço de teste
+· planejamento e logística
 
 
+· combinar missão
 
-Analista de Teste 
 
+· identificar motivadores
+
+
+· adquirir recursos apropriados
+
+
+· apresentar relatórios de gerenciamento
+
+
+· defender os interesses do teste
+
+
+· avaliar a eficiência do esforço de teste
+
+
+
+
+Analista de Teste
 Identifica e define os testes específicos a serem conduzidos.
 
+
 Estas são as responsabilidades:
 
-·         identificar idéias de teste
 
-·         definir detalhes dos testes
+· identificar idéias de teste
 
-·         determinar os resultados dos testes
 
-·         documentar solicitações de mudança
+· definir detalhes dos testes
 
-·         avaliar a qualidade do produto
+
+· determinar os resultados dos testes
+
+
+· documentar solicitações de mudança
+
+
+· avaliar a qualidade do produto
+
+
 
 
 Designer de Teste
-
 Define a abordagem técnica referente à implementação do esforço de teste.
 
+
 Estas são as responsabilidades:
 
-·         definir a abordagem dos testes
 
-·         definir a arquitetura de automação de teste
-
-·         verificar as técnicas de teste
-
-·         definir os elementos de testabilidade
-
-·         estruturar a implementação dos testes
+· definir a abordagem dos testes
 
 
-Testador 
+· definir a arquitetura de automação de teste
 
+
+· verificar as técnicas de teste
+
+
+· definir os elementos de testabilidade
+
+
+· estruturar a implementação dos testes
+
+
+
+
+Testador
 Implementa e executa os testes.
 
+
 Estas são as responsabilidades:
 
-·         implementar os testes e os conjuntos de testes
 
-·         executar os conjuntos de testes
-
-·         registrar os resultados
-
-·         analisar as falhas dos testes e possibilitar a recuperação posterior
-
-·         documentar incidentes
+· implementar os testes e os conjuntos de testes
 
 
+· executar os conjuntos de testes
 
-Administrador do Sistema de Teste 
 
+· registrar os resultados
+
+
+· analisar as falhas dos testes e possibilitar a recuperação posterior
+
+
+· documentar incidentes
+
+
+
+
+Administrador do Sistema de Teste
 Assegura a manutenção e o gerenciamento dos recursos e do ambiente de teste.
 
+
 Estas são as responsabilidades:
 
-·         administrar o sistema de gerenciamento de teste
 
-·         instalar e suportar o acesso às configurações do ambiente de teste e aos laboratórios de teste, bem como a recuperação deles
-
+· administrar o sistema de gerenciamento de teste
 
 
-Administrador do Banco de Dados, Gerente do Banco de Dados 
+· instalar e suportar o acesso às configurações do ambiente de teste e aos laboratórios de teste, bem como a recuperação deles
 
+
+
+
+Administrador do Banco de Dados, Gerente do Banco de Dados
 Assegura o gerenciamento e a manutenção dos recursos e do ambiente dos dados de teste (banco de dados).
 
+
 Estas são as responsabilidades:
 
-·         suportar a administração dos dados de teste e das plataformas de teste (banco de dados)
+
+· suportar a administração dos dados de teste e das plataformas de teste (banco de dados)
 
 
 
-Designer 
 
+Designer
 Identifica e define as operações, os atributos e as associações das classes de teste.
 
+
 Estas são as responsabilidades:
 
-·         define as classes de teste necessárias para suportar os requisitos de testabilidade conforme definido pela equipe de teste
+
+· define as classes de teste necessárias para suportar os requisitos de testabilidade conforme definido pela equipe de teste
+
 
 
 
 Implementador
-
 Implementa as classes de teste e os pacotes de teste e efetua testes de unidade nos mesmos.
 
+
 Estas são as responsabilidades:
-
-·         cria os componentes de teste necessários para suportar os requisitos de testabilidade conforme definido pelo designer
-
-Perfil da Equipe e Necessidades de Treinamento
-N/A. Os profissionais envolvidos são aptos a desenvolver software, o que falta é experiência, mas devido ao tempo previsto, será possível se desenvolver algo melhor do que o esperado.
+· cria os componentes de teste necessários para suportar os requisitos de testabilidade conforme definido pelo designer
 
 
-11. Riscos, Dependências, Suposições e Restrições.
-  N/A. Porque como é um plano de teste, nele estão contidas informações que possam se realizar um projeto sem riscos, dependências, suposições ou restrições.
+13. Perfil da Equipe e Necessidades de Treinamento
+Os profissionais envolvidos são aptos a desenvolver software, o que falta é experiência, mas devido ao tempo previsto, será possível se desenvolver algo melhor do que o esperado.
 
-12. Procedimentos e Processos de Gerenciamento
-    N/A. Porque tais procedimentos e processos de gerenciamento são aplicados nos 10 artefatos desenvolvidos para se realizar um sistema embarcado de tempo real.
 
-    Medição e Avaliação da Extensão do Teste
-      N/A. Não há previsão para a extensão do teste.
 
-    Avaliação dos Produtos Liberados deste Plano de Teste
-      N/A. Não há produtos liberados neste plano de teste, por ser apenas o começo.
 
-    Relato de Problemas, Seleção de Pessoas para Resolvê-los e Busca de Soluções.
-      N/A. Não há problemas pelo projeto estar apenas no começo, então não houve soluções e nem qualquer tipo de mudança.
+14. Riscos, Dependências, Suposições e Restrições.
+N/A. Porque como é um plano de teste, nele estão contidas informações que possam se realizar um projeto sem riscos, dependências, suposições ou restrições.
 
-    Gerenciamento de Ciclos de Teste
-      N/A. Não há ciclos de teste.
 
-    Estratégias de Rastreabilidade
-      N/A. Não há rastreabilidade, somente com o decorrer do desenvolvimento do projeto.
+15. Procedimentos e Processos de Gerenciamento
+N/A. Porque tais procedimentos e processos de gerenciamento são aplicados nos 10 artefatos desenvolvidos para se realizar um sistema de tempo real.
 
-    Aprovação e Encerramento
-      N/A. Sem previsão para esse requisito, somente com o decorrer do desenvolvimento do projeto esse requisito pode ser aplicado ou não, dependerá do andamento do projeto.
+
+16. Medição e Avaliação da Extensão do Teste
+N/A. Não há previsão para a extensão do teste.
+
+
+17. Avaliação dos Produtos Liberados deste Plano de Teste
+N/A. Não há produtos liberados neste plano de teste, por ser apenas o começo.
+
+
+18. Relato de Problemas, Seleção de Pessoas para Resolvê-los e Busca de Soluções.
+N/A. Não há problemas pelo projeto estar apenas no começo, então não houve soluções e nem qualquer tipo de mudança.
+
+
+19. Gerenciamento de Ciclos de Teste
+N/A. Não há ciclos de teste.
+
+
+20. Estratégias de Rastreabilidade
+N/A. Não há rastreabilidade, somente com o decorrer do desenvolvimento do projeto.
+
+
+21. Aprovação e Encerramento
+N/A. Sem previsão para esse requisito, somente com o decorrer do desenvolvimento do projeto esse requisito pode ser aplicado ou não, dependerá do andamento do projeto.
