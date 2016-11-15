@@ -4,8 +4,94 @@ Este documento apresenta o planejamento de atividades de testes do sistema “SY
 
 2. Missão de avaliação e motivação dos testes
 
+Neste documento serão contemplados os principais testes a serem executados no sistema...
+
 3. Itens de Teste-Alvo
+
+A listagem abaixo identifica os itens de Unidade de Software de computador SYSCALL que foram identificados com alvo dos testes.Essa lista representa os itens que serão testados.
+  3.1 Testes funcionais
+    Leitura e escrita no banco de dados    
+    Tempo de resposta nas consultas no banco de dados
+    Tempo de resposta do sistema operacional
+    Latência da Internet
+    
+    
+  3.2 Testes Não Funcionais
+    Fornecimento ininterrupto de energia elétrica
+    Fornecimento ininterrupto de Internet
+    Tempo de resposta
+    Acessos simultâneos
+    
+    
 4. Resumo dos testes planejados
+  4.1  Testes Funcionais
+    4.2 Leitura e escrita no banco de dados
+    
+      Objetivo do Tipo de Teste:
+      Verificar se o operador consegue ler e inserir novos dados no sistema em tempo hábil.
+
+      Técnica:
+      Após cada interação do operador com o banco de dados, deve ser exibido uma mensagem na tela do procedimento e um log de atividades deve ser gerado e armazenado em um servidor de backup.
+
+      Critérios de Êxito:
+      O operador executa uma interação de leitura ou escrita no banco de dados, então é exibida uma mensagem de êxito na interface cliente e gerado um log de atividade.
+
+      Considerações Especiais:
+      Nenhuma.
+    
+    4.3 Tempo de resposta nas consultas no banco de dados
+    4.4 Tempo de resposta do sistema operacional
+    4.5 Latência da Internet
+    
+  4.6  Testes Não Funcionais
+    4.7 Fornecimento ininterrupto de energia elétrica
+    
+      Objetivo do Tipo de Teste:
+      Verificar o fornecimento constante de energia elétrica para o funcionamento do sistema.
+
+      Técnica:
+      Deixar o sistema ligado durante um tempo e observar se o fornecimento permanece constante.
+
+      Critérios de Êxito:
+      A energia ficará sendo fornecida sem cortes.
+
+      Considerações Especiais:
+      Nenhuma.
+    
+    4.8 Fornecimento ininterrupto de Internet
+    
+    
+    4.9 Tempo de resposta
+    
+      Objetivo do Tipo de Teste:
+      Verificar o intervalo de tempo de resposta do barramento de dados
+
+      Técnica:
+      Enviar pacotes de mensagens para o barramento de dados
+
+      Critérios de Êxito:
+      O atendimento deste padrão estabelecido:
+      Time for 4 byte transfer = ~ 82 μs.
+
+      Considerações Especiais:
+      Nenhuma.
+    
+    
+    5.0 Acessos simultâneos
+    
+      Objetivo do Tipo de Teste:
+      Verificar se o servidor de dados consegue gerenciar o acesso simultâneo
+
+      Técnica:
+      Várias máquinas cliente enviando e requisitando mensagens ao barramento de dados ao mesmo tempo.
+
+      Critérios de Êxito:
+      O atendimento de cada acesso de forma escalonada.
+
+      Considerações Especiais:
+      Nenhuma.
+   
+
 4.1 Resumo das inclusões de testes
 4.2 Resumo dos outros candidatos a possível inclusão
 4.3 Resumo das exclusões dos testes.
